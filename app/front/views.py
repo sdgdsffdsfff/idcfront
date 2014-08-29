@@ -18,3 +18,7 @@ def service():
 def room():
     return render_template('pages/room.html',
     web_3d_url="http://110.249.213.19:8080/uinv_demo/index.html?user=admin&pwd=123&type=3d")
+
+@frontView.route('/ddos')
+def ddos():
+    return render_template('pages/ddos.html')
