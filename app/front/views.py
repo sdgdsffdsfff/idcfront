@@ -6,7 +6,8 @@ frontView = Blueprint('front', __name__, template_folder='./templates',
 
 @frontView.route('/')
 def index():
-    return render_template('pages/main.html')
+    return render_template('pages/main.html',
+    web_3d_url="http://110.249.213.19:8080/uinv_demo/index.html?user=admin&pwd=123&type=3d")
 
 
 @frontView.route('/service')
