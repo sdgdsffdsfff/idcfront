@@ -23,3 +23,7 @@ def room():
 @frontView.route('/ddos')
 def ddos():
     return render_template('pages/ddos.html')
+
+@frontView.route('/contact')
+def contact():
+    return render_template('pages/contact.html')
