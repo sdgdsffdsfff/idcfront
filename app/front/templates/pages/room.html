@@ -35,7 +35,7 @@
             </div>
             <div class="span6">
                 <ul class="breadcrumb pull-right">
-                    <li><a href="index.html">首页</a> <span class="divider">/</span></li>
+                    <li><a href="{{ url_for('front.index') }}">首页</a> <span class="divider">/</span></li>
                     <li class="active">机房展示</li>
                 </ul>
             </div>
@@ -78,7 +78,7 @@
                 <div class="overlay">
                 </div>
                 <div class="links">
-                    <a target="_blank" href="{{ web_3d_url }}"><i class="icon-eye-open"></i></a><a target="_blank" href="{{ web_3d_url }}"><i class="icon-link"></i></a>
+                    <a href="{{ url_for('front.room', room_name='石家庄金石机房') }}"><i class="icon-eye-open"></i></a><a target="_blank" href="{{ web_3d_url }}"><i class="icon-link"></i></a>
                 </div>
             </div>
             <div class="desc" data-star="5">

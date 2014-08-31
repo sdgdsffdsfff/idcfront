@@ -7,7 +7,7 @@ frontView = Blueprint('front', __name__, template_folder='./templates',
 @frontView.route('/')
 def index():
     return render_template('pages/main.html',
-    web_3d_url="http://110.249.213.19:8080/uinv_demo/index.html?user=admin&pwd=123&type=3d")
+    web_3d_url="http://3d.uunus.com/uinv_demo/index.html?user=admin&pwd=123&type=3d")
 
 
 @frontView.route('/service')
@@ -16,9 +16,13 @@ def service():
 
 
 @frontView.route('/room')
-def room():
-    return render_template('pages/room.html',
-    web_3d_url="http://110.249.213.19:8080/uinv_demo/index.html?user=admin&pwd=123&type=3d")
+@frontView.route('/room/<room_name>')
+def room(room_name=None):
+    if room_name is None:
+        return render_template('pages/room.html',
+        web_3d_url="http://3d.uunus.com/uinv_demo/index.html?user=admin&pwd=123&type=3d")
+
+    return render_template('pages/room_detail.html')
 
 @frontView.route('/ddos')
 def ddos():
